@@ -11,8 +11,11 @@ html {
 }
 
 .page {
+  display: flex;
+  
   inline-size: 1200px;
-  margin: auto;
+  block-size: 100%;
+  margin-inline: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -53,10 +56,8 @@ a {
   grid-template-rows: 534px;
   align-items: end;
   gap: 30px;
-  margin-inline-start: 30px;
-  margin-inline-end: 30px;
-  margin-block-start: 133px;
-  margin-block-end: 133px;
+  margin-inline: 30px;
+  margin-block: auto;
 }
 
 .result {
@@ -122,6 +123,16 @@ a {
   background-color: transparent;
 }
 
+.search-form__pseudo-checkbox:hover ~ .search-form__label-text {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .search-form__textfield {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -181,15 +192,6 @@ input[type="checkbox"] + span {
   background-size: contain;
   background-position-x: center;
   background-position-y: center;
-}
-
-.search-form__label-text:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.search-form__label:hover .search-form__pseudo-checkbox {
-  cursor: pointer;
 }
 
 .button {
