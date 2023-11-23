@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -10,11 +12,13 @@ html {
 
 .page {
   inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
   background-color: #1b1919;
 }
 
@@ -36,3 +40,308 @@ ul,
 ol {
   list-style: none;
 }
+
+input,
+button,
+a {
+  all: unset;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 711px 1fr;
+  grid-template-rows: 534px;
+  align-items: end;
+  gap: 30px;
+  margin-inline-start: 30px;
+  margin-inline-end: 30px;
+  margin-block-start: 133px;
+  margin-block-end: 133px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;  
+}
+
+.result__video-container {
+  display: flex;
+  position: relative;
+  block-size: 386px;
+}
+
+.result__video {
+  object-fit: cover;
+  inline-size: 100%;
+}  
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.search-form__fieldset {
+  border-block-start: none;
+  border-block-end: none;
+  border-inline-start: none;
+  border-inline-end: none;
+}
+
+.search-form__fieldset-title {
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding-block-end: 5px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__checkbox-list { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+  margin-block-start: 2px;
+}
+
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+  inline-size: fit-content;
+  background-color: transparent;
+}
+
+.search-form__textfield {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+  inline-size: 225px;
+  border-inline-start: 1px solid #1b1919;
+  border-inline-end: 1px solid #1b1919;
+  border-block-start: 1px solid #FFF;
+  border-block-end: 1px solid #FFF;
+  appearance: none;
+  padding-block-start: 2px;
+  padding-block-end: 2px;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.search-form__textfield:hover {
+  cursor: text;
+}
+
+.search-form__textfield:active {
+  border-inline-start: 1px solid #FFF;
+  border-inline-end: 1px solid #FFF;
+  outline: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+input[type="checkbox"] + span {
+  inline-size: 19px;
+  block-size: 19px;
+  border-block-start: 1px solid #FFF;
+  border-block-end: 1px solid #FFF;
+  border-inline-start: 1px solid #FFF;
+  border-inline-end: 1px solid #FFF;
+  background-color: transparent;
+  margin-inline-end: 5px;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.search-form__label-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.search-form__label:hover .search-form__pseudo-checkbox {
+  cursor: pointer;
+}
+
+.button {
+  display: block;
+  font-weight: 700;
+  background-color: transparent;
+  border-inline-start: 1px solid #fff;
+  border-inline-end: 1px solid #fff;
+  border-block-start: 1px solid #fff;
+  border-block-end: 1px solid #fff;
+  block-size: 34px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.search-form__submit-button {
+  inline-size: 194px;
+}
+
+.search-form__submit-button:last-child {
+  margin-top: auto;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px; 
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-block-end: -3px;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 94%;
+  color: inherit;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  block-size: 298px;
+  inline-size: 100%;
+  padding-block-start: 3px;
+  padding-block-end: 3px;
+  padding-inline-start: 3px;
+  padding-inline-end: 3px;
+}
+
+.preloader-template {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.content__list-item {
+  padding-block-end: 30px;
+}
+
+.content__card-link {
+  display: flex;
+  flex-direction: column;
+  inline-size: 397px;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__video-card:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content__video-card:active {
+  background-color: #545050;
+}
+
+.content__video-card-description-container {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  padding-block-end: 6px;
+}
+
+.content__video-card-description {
+  color: #FFF;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.2px;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+  object-fit: cover;
+}
+
+.more-button {
+  width: 100%;
+}
+
+
+
+
+
+
