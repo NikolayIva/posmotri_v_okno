@@ -235,7 +235,6 @@ input[type="checkbox"] + span {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  /* margin-block-end: -3px; */
 }
 
 .title {
@@ -260,10 +259,6 @@ input[type="checkbox"] + span {
   inline-size: 100%;
   padding-inline: 3px;
   padding-block-end: 3px;
-  /* padding-block-start: 3px;
-  padding-block-end: 3px;
-  padding-inline-start: 3px;
-  padding-inline-end: 3px; */
 }
 
 .preloader-template {
@@ -277,7 +272,7 @@ input[type="checkbox"] + span {
   padding-block-end: 30px;
 }
 
-.content__list-item:nth-last-child(2) {
+.content__list-item:last-child {
   padding-block-end: 0;
 }
 
